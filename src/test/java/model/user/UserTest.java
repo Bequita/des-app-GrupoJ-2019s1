@@ -1,4 +1,4 @@
-package ar.edu.unq.desapp.grupoJ.desappgroupJbackend;
+package model.user;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,11 +7,10 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-public class DesappGroupJBackendApplicationTests {
+public class UserTest {
 
 	@Test
-	public void initialTest() {
-		assertEquals("test", "test");
+	public void hasName() {
+		assertEquals("matayas", "matayas");
 	}
-
 }
