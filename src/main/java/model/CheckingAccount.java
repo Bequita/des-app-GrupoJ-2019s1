@@ -1,52 +1,50 @@
 package model;
 
-import java.util.Date;
-
 public class CheckingAccount {
 
-    private String name;
-    private String surname;
-    private String email;
-    private Date birthdate;
 
-    public void setName(String name) {
-        this.name = name;
+    private User owner;
+    private int accountAmount;
+
+    public User getOwner() {
+        return owner;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setOwner(User accountOwner) {
+        this.owner = accountOwner;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public int getAccountAmount() {
+        return accountAmount;
     }
 
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
+    public void setAccountAmount(int accountAmount) {
+        this.accountAmount = accountAmount;
     }
 
-    public String getName() {
-        return name;
+    public CheckingAccount(User accountOwner, int accountAmount) {
+        this.owner = accountOwner;
+        this.accountAmount = accountAmount;
     }
 
-    public String getSurname() {
-        return surname;
+    public void addBalance(int amount) {
+        this.accountAmount = this.accountAmount + amount;
     }
 
-    public String getEmail() {
-        return email;
+    //TODO: Manejar con excepciones
+    public void subtractBalance(int amount) {
+
+        int mount = this.accountAmount;
+
+        if (((mount - amount)) >= 0) {
+            this.accountAmount = this.accountAmount - amount;
+        } else
+            System.out.println("You do not have a balance in your account");
     }
 
-    public Date getBirthdate() {
-        return birthdate;
+    public int checkBalance(){
+        return this.getAccountAmount();
     }
-
-    //TODO
-    //public void addBalance();
-
-    //public void subtractBalance();
-
-    //public int checkBalance();
 
     //public boolean applyForALoan();
 

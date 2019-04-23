@@ -5,6 +5,8 @@ import java.util.Date;
 
 public class PartyEvent extends Event {
 
+    private Date deadline;
+
     public Date getDeadline() {
         return deadline;
     }
@@ -13,11 +15,9 @@ public class PartyEvent extends Event {
         this.deadline = deadline;
     }
 
-    private Date deadline;
-
-    public PartyEvent(User cataloguer, ArrayList guestUserList, Date deadline1) {
+    public PartyEvent(User cataloguer, ArrayList<User> guestUserList, Date deadline1) {
         super(cataloguer, guestUserList);
-        this.deadline = deadline1;
+        deadline = deadline1;
     }
 
     //public void sendInvitation(Date deadline, ArrayList guestUserList){  }

@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringRunner.class)
 public class UserTest {
 
-	public User userExample = new User("Nicolas", "Pintos", "nico.pintos05@gmail.com", new Date());
+	public User userExample = new User("Nicolas", "Pintos", "nico.pintos05@gmail.com", "saraza",new Date());
 
 	@Test
 	public void hasName() {
@@ -29,6 +29,8 @@ public class UserTest {
 		assertEquals("nico.pintos05@gmail.com", userExample.getEmail());
 	}
 
+	@Test
+	public void hasPass() { assertEquals("saraza", userExample.getPassword());}
 	@Test
 	public void validDate(){
 		/* VER!!!!! */

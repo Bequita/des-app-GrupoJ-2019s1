@@ -6,7 +6,12 @@ public class User {
     private String name;
     private String surname;
     private String email;
-    private Date birthdate;
+    private String password;
+    private Date birthday;
+
+    public String getPassword() { return password;  }
+
+    public void setPassword(String password) { this.password = password; }
 
     public void setName(String name) {
         this.name = name;
@@ -20,8 +25,8 @@ public class User {
         this.email = email;
     }
 
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public String getName() {
@@ -36,15 +41,16 @@ public class User {
         return email;
     }
 
-    public Date getBirthdate() {
-        return birthdate;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public User(String name1, String surname1, String email1, Date birthdate1){
+    public User(String name1, String surname1, String email1, String pass, Date birthday1){
             this.name = name1;
             this.surname = surname1;
             this.email = email1;
-            this.birthdate = birthdate1;
+            this.password = pass;
+            this.birthday = birthday1;
         }
 
 }
